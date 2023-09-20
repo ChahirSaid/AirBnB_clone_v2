@@ -145,7 +145,8 @@ class HBNBCommand(cmd.Cmd):
                             {attribute[0]: attribute[1].strip('"')}
                         )
                     elif (attribute[1].replace(".", "", 1).isdigit()
-                          or attribute[1].replace(".", "", 1).replace("-", "", 1)):
+                          or attribute[1].replace(".", "", 1)
+                          .replace("-", "", 1)):
                         if attribute[1].isdigit():
                             new_instance.__dict__.update(
                                 {attribute[0]: int(attribute[1])}
